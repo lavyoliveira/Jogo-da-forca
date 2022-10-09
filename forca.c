@@ -1,8 +1,8 @@
+#include "forca.h"
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 #include <time.h>
-#include "forca.h"
 
 // Variáveis globais
 char palavraSecreta[20];
@@ -102,16 +102,3 @@ int acertou() {
     }
     return 1;
 }
-
-int main()
-{
-    escolhePalavra(palavraSecreta);
-    abertura();
-
-    do
-    {
-        desenhaForca();
-        chuta();
-
-    } while (!acertou() && !enforcou());
-} 
